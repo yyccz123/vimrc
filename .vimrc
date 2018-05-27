@@ -12,7 +12,8 @@ set helplang=cn
 set number
 set hlsearch		" search high light "
 set ignorecase		"搜索忽略大小写"
-set smartcase		"智能大小写，只有输入单词含大写时，只搜索大写"
+set smartcase		"智能大小写搜索，只有输入单词含大写时，只搜索大写"
+set nowrapscan      "禁止循环搜索"
 set paste
 
 set tabstop=4       "表示一个tab显示出来是多少个空格的长度.
