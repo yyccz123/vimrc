@@ -13,13 +13,13 @@ set number
 set hlsearch		" search high light "
 set ignorecase		"搜索忽略大小写"
 set smartcase		"智能大小写搜索，只有输入单词含大写时，只搜索大写"
-set nowrapscan      "禁止循环搜索"
+set wrapscan		"不禁止循环搜索"
 set paste
 
 set tabstop=4       "表示一个tab显示出来是多少个空格的长度.
 set softtabstop=4   "表示在编辑模式的时候按退格键的时候退回缩进的长度，当使用expandtab时特别有用.
 set shiftwidth=4    "表示每一级缩进的长度,一般设置成跟 softtabstop一样.
-set noexpandtab       "当设置成 expandtab 时,缩进用空格来表示，noexpandtab则是用制表符表示一个缩进。当在写Makefile的时候要设置成noexpandtab
+set noexpandtab     "当设置成 expandtab 时,缩进用空格来表示，noexpandtab则是用制表符表示一个缩进。当在写Makefile的时候要设置成noexpandtab
 
 "------------------------------------------------------
 "字符编码
@@ -124,9 +124,10 @@ nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
 nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :scs find f 
 
 "------------------------------------------------------
 "-- quickfix setting --
