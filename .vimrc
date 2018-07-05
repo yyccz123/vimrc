@@ -127,14 +127,18 @@ nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 "nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>f :scs find f 
+nmap <C-_>f :cs find f 
 
 "------------------------------------------------------
 "-- quickfix setting --
 "修改QuickFix窗口显示的最大条目数
 let g:ctrlp_max_height = 15
+"close window
+nmap <F3> :clo<cr>
+"open window with 15 height
+nmap <F4> :cw 15<cr>
 nmap <F6> :cp<cr>
 nmap <F7> :cn<cr>
 "上下切换查询的结果
-nmap <C-n> :cnext<CR>
-nmap <C-p> :cprev<CR> 
+"nmap <C-n> :cnext<CR>
+"nmap <C-p> :cprev<CR> 
